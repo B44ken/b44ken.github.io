@@ -1,0 +1,35 @@
+body {
+	background-color: #101010;
+}
+
+h1 {
+	font-family: Roboto, sans-serif;
+	color: #EAEAEA;
+	font-size: 60px;
+}
+
+h2 {
+	font-family: Roboto, sans-serif;
+	color: #EAEAEA;
+	font-size: 24px
+}
+
+p {
+	font-family: Georgia, serif;
+	color: #EAEAEA;
+	font-size: 16px
+}
+
+a {
+	color: #FF0000
+}
+
+button {
+    background-color: #101010;
+    border: none;
+    color: white;
+    padding: none;
+}
+button:hover {
+    background-color: #FF0000;
+}

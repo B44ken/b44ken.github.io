@@ -1,0 +1,83 @@
+.button {
+	font-family: Comic Sans MS;
+	padding: 15px 25px;
+	 font-size: 16px;
+	text-align: center;
+	cursor: pointer;
+	outline: none;
+	color: #fff;
+	background-color: #fab;
+	border-radius: 15px;
+	border: 5px outset #aff;
+	background-color: #333;
+	color: #eee;
+}
+.button:active {
+	padding: 20px 30px;
+	border: 2px outset #aff;
+	transform: translateY(7px);
+}
+.button:hover {
+	background-color: #222;
+	border: 4px outset #aff;
+	color: #eee;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+}
+body {
+	overflow: hidden;
+	text-align: center;
+	background-color: rgb(10, 15, 15);
+}
+#up, #down {
+	background-color: #0f0;
+	border: 5px outset #fff;
+	border-radius: 50%;
+	padding: 1%;
+	font-size: 150%;
+	font-family: Comic Sans MS;
+	color: #fff;
+	position: fixed;
+	right: 0%;
+}
+#up:focus, #down:focus {
+	outline:none;
+}
+#up {
+	top: 0%;
+}
+#down {
+	bottom: 0%;
+}
+.pinktext {
+	color: pink;
+	font-family: Comic Sans MS;
+}
+#dark {
+	background-color: #666;
+	color: #ddd;
+	border: none;
+	border-radius: 5px 0px 0px 5px;
+}
+#light {
+	border: none;
+	border-radius: 0px 5px 5px 0px;
+}
+#dark,
+#light {
+	transition-duration: 0.4s;
+	padding: 7px;
+	margin: 3px;
+}
+#dark:hover,
+#light:hover {
+	padding: 10px;
+	margin: 0px;
+}
+#light:focus, #dark:focus {
+	border: 5px outset #aff;
+	outline: none;
+}

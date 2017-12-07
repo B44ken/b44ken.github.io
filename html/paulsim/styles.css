@@ -1,0 +1,82 @@
+#paul {
+	background-image: url(jakepaul.png);
+	background-size: 100% 100%;
+	height: 300px;
+	width: 300px;
+	text-align: center;
+	color: #d583a5;
+	font-size: 20px;
+	font-family: Georgia, serif;
+}
+.game {
+	positon: absolute;
+	height: 300px;
+	width: 500px;
+	border: 3px solid pink;
+}
+.options {
+	bottom: 302px;
+	background-color: pink;
+	position: relative;
+	left: 300px;
+	height: 300px;
+	width: 200px;
+	border: 2px solid pink;
+}
+.description {
+	width: 500px;
+}
+.playnick {
+	height: 30px;
+	font-size: 22px;
+	background: linear-gradient(to left, #d583a5, #12b6ef);
+}
+.playbutton {
+	display: none;
+}
+button {
+	background-color: #d583a5;
+	border: none;
+	width: 100%;
+	font-family: Georgia, serif;
+	font-size: 16px;
+	display: block;
+	margin: 0 auto;
+}
+
+h1 {
+	color: #d583a5;
+	font-family: Gregoria, serif;
+}
+p {
+	margin: 10px;
+	display: inline-block;
+	color: #d583a5;
+	font-family: Gregoria, serif;
+	font-size: 20px;
+}
+
+/*ENGLAND IS MY CITY*/
+
+.nick > .game > #paul {
+	background-image: url(nickcrompton.jpg);
+	color: #12b6ef;
+}
+.nick > .description > p, .nick > h1, .nick > .game > .options > p {
+	color: #12b6ef;
+}
+.nick > .game > .options {
+	background-color: #ccf;
+}
+.nick > .description > .playbutton > p {
+	color: #12b6ef;
+}
+.nick > .game > .options > button {
+	background-color: #55b;
+}
+.nick > .game {
+	border: 3px solid #55b;
+}
+.nick > .game > .options {
+	border: 2px solid #55b;
+}

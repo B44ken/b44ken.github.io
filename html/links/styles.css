@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Work+Sans');
+::selection {
+    color: #FAFAFA;
+    background: #212121;
+}
+h1 {
+	font-family: "Work Sans", sans-serif;
+	text-align: center;
+	color: white;
+	font-weight: 300;
+}
+body {
+	overflow-x: hidden;
+	width: 100vw;
+	height: 100vh;
+	background-image: url(img/background.jpg);
+	margin: 0px;
+	background-position: center;
+}
+p, a {
+	color: black;
+	font-family: "Work Sans", sans-serif;
+	padding: 3px;
+	padding-top: 210px;
+}
+.credit {
+	text-align: center;
+	color: white;
+	bottom: 0px;
+	font-family: 'Work Sans', sans-serif;
+}
+.item {
+	text-align: center;
+	float: right;
+	border-radius: 50%;
+	height: 200px;
+	width: 200px;
+}
+.details {
+	vertical-align: top;
+	overflow: hidden;
+	display: inline-block;
+	border-radius: 100px;
+	background-color: #FAFAFA;
+	width: 200px;
+	height: 200px;
+	margin: 0 auto;
+	margin-top: 5%;
+	transition-duration: 500ms;
+}
+.details:hover {
+	height: 450px;
+}
+.instagram {
+	background-image: url(img/instagram.jpg);
+	background-size: 120%;
+	background-position: center;
+}
+.github {
+	background-image: url(img/github.png);
+	background-size: 140%;
+	background-position: center;
+}
+.codepen {
+	background-image: url(img/codepen.png);
+	background-size: 110%;
+	background-position: center;
+}
+.heart {
+	background-image: url(img/heart.png);
+	background-size: 95%;
+	background-position: center;
+}
+.links {
+	width: 820px;
+	margin: 0 auto;
+}
+@media screen and (max-width: 840px) {
+	.details {
+		height: 450px;
+	}
+	.links {
+		width: 210px;
+	}
+	.hover {
+		display: none;
+	}
+}
+@media screen and (min-width: 1500px) {
+	body {
+		background-size: 120%;
+	}
+}
