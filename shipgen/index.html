@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Ship Name Generator</title>
+	</head>
+	<body>
+		<h1>SHIP NAME GENERATOR</h1>
+		<input type="text" id="name1">
+		<input type="text" id="name2">
+		<button onclick="ship()">sUFFER</button>
+		<h2 >
+			Your name is... 
+			<div id="output"></div>
+		</h2>
+		<script>
+			var getID = i => window[i] = document.getElementById(i);
+			// Append element to dom with ID e.x. getID("output") creates var output
+			
+			function ship() {
+			getID("name1");
+			getID("name2");
+			getID("output");
+			output.textContent = name1.value[0] + name2.value.slice(1);
+			}
+		</script>
+		<style>
+			body {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			}
+			* {
+			font-family: cursive;
+			text-align: center;
+			}
+		</style>
+	</body>
+</html>
