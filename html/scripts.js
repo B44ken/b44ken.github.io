@@ -62,7 +62,13 @@ const cardContent = [
 		desc: '"my bestest friend billy\'s site for all your realizing how gay he is needs" - Billy',
 		link: "http://someonekill.me/billy",
 		img: "assets/thumbnails/billy.jpg",
-	}
+	},
+	{
+		title: "Jake Paul Sim",
+		desc: "Play as fan favourite jake paul in the most monotonous clicker game of the year. Now with Nick Crompton!",
+		link: "http://someonekill.me/paulsim",
+		img: "http://someonekill.me/paulsim/jakepaul.png"
+	},
 ];
 
 for (val in cardContent) {
