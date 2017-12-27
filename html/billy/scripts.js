@@ -13,9 +13,3 @@ function whatever() {
 function Function() {
 	document.getElementById("clickbait").textContent="Wait what?!?! I honestly thought that did nothing!";
 }
-function up() {
-	window.scrollBy(0,-100);
-}
-function down() {
-	window.scrollBy(0,100);
-}
