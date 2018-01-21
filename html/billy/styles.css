@@ -1,7 +1,10 @@
+img {
+	border-radius: 15px;
+}
 .button {
 	font-family: Comic Sans MS;
 	padding: 15px 25px;
-	 font-size: 16px;
+	font-size: 16px;
 	text-align: center;
 	cursor: pointer;
 	outline: none;
@@ -28,17 +31,17 @@
 	font-size: 16px;
 }
 body {
-	overflow: hidden;
 	text-align: center;
-	background-color: rgb(10, 15, 15);
+	background-color: rgb(20, 25, 25);
 }
 ::-webkit-scrollbar {
-	width: 8px;
-	background-color: #111;
+	box-shadow: 2px 0px 25px 0px #eee;
+	width: 10px;
+	background: linear-gradient(to bottom, #f00, #fc0, #ff0, #0f0, #00f, #f0f);
 }
 ::-webkit-scrollbar-thumb {
 	border-radius: 10px;
-	background:  linear-gradient(to top, #ddd, #eee);
+	background-color: #fff;
 }
 .pinktext {
 	color: pink;
@@ -68,4 +71,14 @@ body {
 #light:focus, #dark:focus {
 	border: 5px outset #aff;
 	outline: none;
+}
+a {
+	color: #faa;
+	text-decoration: line-through;
+}
+a:hover {
+	color: #afa;
+}
+a:active {
+	color: #aaf;
 }
