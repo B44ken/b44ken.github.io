@@ -72,10 +72,10 @@ const cardContent = [
 ];
 
 for (val in cardContent) {
-	document.getElementsByClassName("cardcontainer")[0].innerHTML += `
-		<a class="card" href="${cardContent[val].link}">
-			<img src="${cardContent[val].img}" alt="Card image" class="cardimg">
-			<h3>${cardContent[val].title}</h3>
-			${cardContent[val].desc}
-		</a>`;
+	document.getElementsByClassName("cardcontainer")[0].innerHTML += 
+		'<a class="card" href="' + cardContent[val].link + '">' + 
+			'<img src="' + cardContent[val].img + '" alt="Card image" class="cardimg">' +
+			'<h3>' + cardContent[val].title + '</h3>' +
+			cardContent[val].desc + 
+		'</a>';
 }
