@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css?family=Lora');
+
+body { margin: 0 }
+* { font-family: 'Lora' }
+pre {
+	--padding: 18px;
+	white-space: pre-wrap;
+	position: relative;
+	top: var(--padding);
+	margin: 0 auto;
+	font-size: 18px;
+	width: 66vw;
+	height: calc(100vh - (var(--padding) * 2));
+}
+.question {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0.5;
+	position: absolute;
+	top: 0px;
+	width: 60px;
+	height: 60px;
+}
+button {
+	display: block;
+	border-radius: 50%;
+	width: 80%;
+	height: 80%;
+	background: #00ACC1;
+}
