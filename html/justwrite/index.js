@@ -4,7 +4,7 @@ var pre = document.querySelector("pre");
 
 if (document.cookie.split("justwrite").length == 2)
 	var prev = document.cookie.split("justwrite:")[1].split(";")[0];
-pre.textContent = prev;
+pre.innerText = prev;
 
 document.addEventListener("keyup", e => {
 	if (e.ctrlKey) {
@@ -16,7 +16,7 @@ document.addEventListener("keyup", e => {
 				document.body.style.background = "#212121";
 				document.body.style.color = "#efefef";
 			}
-		if(e.key == 'a') document.cookie = "justwrite:" + pre.textContent + ";";
+		if(e.key == 'a') document.cookie = "justwrite:" + pre.innerText + ";";
 		theme = !theme;
 	}
 });
