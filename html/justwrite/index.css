@@ -12,6 +12,9 @@ pre {
 	width: 66vw;
 	height: calc(100vh - (var(--padding) * 2));
 }
+pre::first-line {
+	font-size: 32px;
+}
 .question {
 	display: flex;
 	justify-content: center;
