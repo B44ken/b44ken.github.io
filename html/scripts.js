@@ -40,6 +40,12 @@ if (choose == 0) {
 // Cards
 const cardContent = [
 	{
+		title: "Just Write",
+		desc: "Virtually distraction free text editor. Just.. write.",
+		link: "http://someonekill.me/justwrite",
+		img: "/assets/thumbnails/justwrite.png",
+	},
+	{
 		title: "Links page",
 		desc: "Page for linking to all the other websites I'm semi-active on.",
 		link: "http://someonekill.me/links/",
