@@ -1,0 +1,33 @@
+#spaget {
+	width: 400px;
+	height: 200px;
+	background-size: 400px 200px;
+	background-image: url("http://moziru.com/images/plate-clipart-spaghetti-and-meatball-12.jpg");
+	position: absolute;
+	bottom: 0px;
+	left: 30vw;
+}
+#knukles {
+	text-align: center;
+	width: 400px;
+	height: 200px;
+	background-size: 400px 200px;
+	background-image: url("http://i0.kym-cdn.com/photos/images/original/001/337/786/426.png"); 
+	position: absolute;
+	right: 0vw;
+	color: #00f;
+}
+#score {
+	text-align: center;
+}
+#bear {
+	text-align: center;
+	width: 400px;
+	height: 200px;
+	background-size: 400px 200px;
+	background-image: url("https://pre00.deviantart.net/3057/th/pre/f/2018/005/b/7/somebody_toucha_my_spaghet__by_vex2001-dbz0qz5.png"); 
+	position: absolute;
+	left: 0vw;
+	color: #00f;
+	opacity: 0;
+}
