@@ -2,10 +2,10 @@ var help = "hyperminamalist text editor. \ndark/light theme is ctrl q. \nsave is
 var theme = false;
 var pre = document.querySelector("pre");
 
-if (document.cookie.split("justwrite").length == 2)
+if (document.cookie.split("justwrite").length == 2) {
 	var prev = document.cookie.split("justwrite:")[1].split(";")[0];
-pre.innerText = prev;
-
+	pre.innerHTML = prev;
+}
 document.addEventListener("keyup", e => {
 	if (e.ctrlKey) {
 		if (e.key == "q")
@@ -16,7 +16,7 @@ document.addEventListener("keyup", e => {
 				document.body.style.background = "#212121";
 				document.body.style.color = "#efefef";
 			}
-		if(e.key == 'a') document.cookie = "justwrite:" + pre.innerText + ";";
+		if(e.key == 'a') document.cookie = "justwrite:" + pre.innerHTML + ";";
 		theme = !theme;
 	}
 });
