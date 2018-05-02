@@ -1,4 +1,4 @@
-<!-- Generated with Pug - pugjs.org-->
+<!-- Generated with Pug - pugjs.org -->
 
 <style>
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
@@ -24,10 +24,20 @@ body {
 }
 </style>
 
+<div class="container">
+  <style class="uicontrol">.ui{opacity:1}</style>
+  <h1 class="ui">Sound Bomb</h1>
+  <h3 class="ui">Choose Song:</h3>
+  <select class="song">
+    <option value="africa">Toto - Africa</option>
+    <option value="cellsong">Carlo Desantis - Cell Song </option>
+  </select><br/>
+  <button class="start">Start timer (30 seconds)</button>
+  <h1 class="time">30</h1>
+</div>
+
 <script>
 let $ = ( e ) => document.querySelector(e)
-
-
 
 let hideUi = () => {
 	if ($('.hideui').checked) $('.uicontrol').innerHTML = '.ui{opacity: 0}'
@@ -57,15 +67,3 @@ $('.start').addEventListener('click', () => {
 	}, 1000)
 })
 </script>
-
-<div class="container">
-  <style class="uicontrol">.ui{opacity:1}</style>
-  <h1 class="ui">Sound Bomb</h1>
-  <h3 class="ui">Choose Song:</h3>
-  <select class="song">
-    <option value="africa">Toto - Africa</option>
-    <option value="cellsong">Carlo Desantis - Cell Song </option>
-  </select><br/>
-  <button class="start">Start timer (30 seconds)</button>
-  <h1 class="time">30</h1>
-</div>
