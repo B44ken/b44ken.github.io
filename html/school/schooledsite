@@ -1,0 +1,160 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Schooled Site</title>
+</head>
+<body>
+  <div class="panes">
+	<div class="nav">
+		<img src="cover.jpg" class="cover" alt="Schooled Cover">
+		<div class="pages">
+			<button class="page" onclick="page(this)">Home</button>
+			<button class="page" onclick="page(this)">About the Author</button>
+			<button class="page" onclick="page(this)">About the Book</button>
+			<button class="page" onclick="page(this)">Why Should I Read This?</button>
+			<button class="page" onclick="page(this)">Pictures for the Book</button>
+			<button class="page" onclick="page(this)">Songs for the Characters</button>
+		</div>
+	</div>
+	<div class="main">
+		<div class="visible">
+			<h1>About the Book</h1>
+			Characters: There are many characters in the book here are the main once, Capricorn, Grandmother Rain, Police officer, Zach, Sophie, and other kids who usually bully Capricorn. <br> <br> Setting: The setting in the story changes very quickly in the
+			begging the story starts in a in the farm of the village, then later they are on a highway bringing the rain to the hospital. later they live in the city where he attends school,and try and enjoy life.</div>
+		<div class="background"></div>
+		<div class="text" data-title="Home">
+			<h1>Home Page</h1>
+			<p>No TV! No Pizza! No Fun. That was the life of Capricorn. Capricorn was born in a secret community that almost no one new about. One day while he was working in the farm of the village, he heard a loud noise, <b>CRACK!</b> he rushed over there to see
+				his grandmother had fallen off a tree trying to pick peaches, and saw her injuries. Capricorn looked around to see there was any of the village people where there,but there was not any. His grandmother told him to get the doctor, so he went to get
+				him. His grandmother said not the village doctor, but a real doctor. Capricorn had to drive his grandmother to the city. on a highway a police officer had to stop him and asked him for his age, Capricorn answered with 13. read the book to find out
+				what happens to Capricorn, and his life in the city.</p>
+		</div>
+		<div class="text" data-title="About the Author">
+			<h1>About the Author</h1>
+			Gordon Korman is the author of more than sixty books for kids and young adults, most recently Pop. His writing career began at the age of twelve when his seventh-grade English assignment became his first published novel.Now, thirty-three years later,
+			he is a full-time writer and speaker, with more than sixteen million copies of his novels in print. His books have been translated into French, Swedish, Danish, Spanish, Norwegian, Hebrew, Chinese, Japanese, Portuguese, Italian, Korean, Dutch, Greek,
+			and Thai.
+
+			<img class="docimg" src="books.png" alt="Gordan Korsauce's books"></img>
+		</div>
+		<div class="text" data-title="About the Book">
+			<h1>About the Book</h1>
+			Characters: There are many characters in the book here are the main once, Capricorn, Grandmother Rain, Police officer, Zach, Sophie, and other kids who usually bully Capricorn. <br> <br> Setting: The setting in the story changes very quickly in the
+			begging the story starts in a in the farm of the village, then later they are on a highway bringing the rain to the hospital. later they live in the city where he attends school,and try and enjoy life.</div>
+		<div class="text" data-title="Why Should I Read This?">
+			<h1>Why should I read this?</h1>
+			This is a very realistic book that pretty much explains what happens to some students in school. I do recommend children from ages five and up to read this book and find some of the difficulties of school. If you are a bully, how do you effect other people.
+			This book also contains some funny, and some emotional parts that you may laugh to or maybe tear up to. This book also may includes some tips that you may struggle in school that will help you,and that why I should all kids should read this book.
+		</div>
+		<div class="text" data-title="Pictures for the Book?">
+			<h1>Pictures For The Book</h1>
+			<div class="scroll">
+				<img src="forbook.png" alt="For the Book" class="scrollimg">
+			</div>
+		</div>
+		<div class="text" data-title="Songs for the Characters">
+			<h1>Songs for the Characters <br> <a href="https://www.youtube.com/watch?v=FTQbiNvZqaY">Toto - Africa</a></h1>
+		</div>
+	</div>
+
+	<style>
+		@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+
+		::selection {
+			background: #ffdd59;
+		}
+
+		body,
+		.panes {
+			background: url("background.png");
+			background-size: cover;
+			width: 100vw;
+			height: 100vh;
+			margin: 0;
+		}
+
+		.nav {
+			z-index: 0;
+			width: 20%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+		}
+
+		.pages {
+			height: 50%;
+		}
+
+		.cover {
+			height: 50%;
+		}
+
+		button {
+			outline: none;
+			background-color: #ffffff55;
+			border: 3px outset #fff;
+			font-size: 20px;
+			width: 100%;
+			height: calc(100% / 6);
+		}
+
+		button:active {
+			border: 3px inset #fff;
+		}
+
+		.main {
+			padding: 0 15px;
+			width: calc(80% - 30px);
+			height: 100%;
+			background-size: 100vw 100vh;
+			z-index: 0;
+			position: absolute;
+			top: 0;
+			right: 0;
+		}
+
+		.text {
+			display: none;
+		}
+
+		* {
+			font-family: "Open Sans"
+		}
+
+		.visible {
+			font-size: 20px;
+		}
+
+		h1 {
+			text-align: center;
+			font-size: 40px;
+		}
+		.visible {
+			z-index: 0;
+		}
+
+		.docimg {
+			margin-top: 50px;
+			margin-left: calc(25% / 2);
+			width: 75%;
+		}
+
+		.scroll {
+			overflow: scroll;
+		}
+
+		.song {
+			margin: 0 auto;
+		}
+	</style>
+
+	<script>
+		let $ = (s) => document.querySelector(s) // jQuery xd
+		let fromTitle = (t) => $(`.text[data-title*="${t}"]`)
+		let page = (th) => $('.visible').innerHTML = fromTitle(th.textContent).innerHTML
+	</script>
+</div>
+
+</body>
+
+</html>
