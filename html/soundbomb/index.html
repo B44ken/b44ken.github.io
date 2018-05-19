@@ -1,70 +1,107 @@
 <!-- Generated with Pug - pugjs.org -->
-
 <style>
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
+	@import url('https://fonts.googleapis.com/css?family=Montserrat');
+	* {
+		font-family: Montserrat
+	}
 
-* { font-family: Montserrat }
+	body {
+		margin: 0;
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
 
-body {
-	margin: 0;
-	width: 100vw;
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.container {
-	text-align: center;
-	padding: 20px;
-	border-radius: 4px;
-	box-shadow: 5px 5px 3px #444;
-	width: 300px;
-	height: 230px;
-	background: #29B6F6;
-}
+	.container {
+		text-align: center;
+		padding: 2px;
+		border-radius: 4px;
+		box-shadow: 5px 5px 3px #444;
+		width: 450px;
+		height: 300px;
+		background: #29B6F6;
+	}
+
+	.panes {
+		display: flex;
+	}
+
+	.pane {
+		width: 50%;
+	}
+
+	.pane * {
+		width: 90% margin: 0 auto;
+	}
+
+	.selector * {
+		width: 25%;
+		display: inline-block;
+	}
 </style>
-
 <div class="container">
-  <style class="uicontrol">.ui{opacity:1}</style>
-  <h1 class="ui">Sound Bomb</h1>
-  <h3 class="ui">Choose Song:</h3>
-  <select class="song">
-    <option value="africa">Toto - Africa</option>
-    <option value="cellsong">Carlo Desantis - Cell Song </option>
-    <option value="minecraftrap">BrySi - Minecraft Rap</option>
-  </select><br/>
-  <button class="start">Start timer (30 seconds)</button>
-  <h1 class="time">30</h1>
-</div>
-
-<script>
-let $ = ( e ) => document.querySelector(e)
-
-let hideUi = () => {
-	if ($('.hideui').checked) $('.uicontrol').innerHTML = '.ui{opacity: 0}'
-	else $('.uicontrol').innerHTML = '.ui{opacity: 1}'
-}
-
-let playSong = () => {
-	let path = 
-`http://someonekill.me/soundbomb/songs/${$('.song').value}.mp3`
-	let audio = new Audio(path)
-	audio.play()
-}
-
-$('.start').addEventListener('click', () => {
-	let time = 30
-	let played = false
-	setInterval(() => {
-		time--
-		$('.time').textContent = time
-		if(time < 1) {
-			time++
-			if(played == false) {
-				playSong()
-				played = true
-			}
+	<style class="uicontrol">
+		.ui {
+			opacity: 1
 		}
-	}, 1000)
-})
+	</style>
+	<h1>Sound Bomb</h1>
+	<h3>Choose Song:</h3>
+	<div class="panes">
+		<div class="pane">
+			<select class="song">
+                <option value="africa">Toto - Africa</option>
+                <option value="cellsong">Carlo Desantis - Cell Song </option>
+            </select>
+			<button class="start">Start timer (30 seconds)</button>
+		</div>
+		<div class="pane">
+			<div class="selector">
+				<input type="number" class="hour" placeholder="HH" max="12" min="1" value="19">
+				<!--
+				--><input type="number" class="mins" placeholder="MM" max="59" min="0" value="0"></div>
+			<div><input type="checkbox" class="pm">PM</div>
+			<button class="startstamp"> Use EST </button>
+		</div>
+	</div>
+	<h1 class="time">30</h1>
+</div>
+<script>
+	let $ = (e) => document.querySelector(e) // jQuery?
+	let playSong = () => { // Find and play the song
+		let path =
+			`http://someonekill.me/soundbomb/songs/${$('.song').value}.mp3`
+		let audio = new Audio(path);
+		audio.play()
+	}
+	let countdown = (time) => { // Count down the song then play it
+		let played = false
+		setInterval(() => {
+			time--
+			$('.time').textContent = time
+			if (time < 1) {
+				time++
+				if (played == false) {
+					playSong()
+					played = true
+				}
+			}
+		}, 1000)
+	}
+	$('.start').addEventListener('click', () => {
+		countdown(30)
+	})
+	$('.startstamp').addEventListener('click', () => {
+		let d = new Date()
+		let cur = {
+			h: $('.hour').value - d.getUTCHours() + 4,
+			m: $('.mins').value - d.getUTCMinutes(),
+			p: ($('.pm').checked + 0) * 12 * 60,
+		}
+		console.log(cur)
+		let left = 60 * (cur.h * 60 + cur.m + cur.p)
+		if (left > 0) countdown(left)
+	})
 </script>
