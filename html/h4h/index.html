@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+	<head>
+		<meta content-type="UTF-8">
+		<title>Hobbies for Humans</title>
+		<script src="markdown.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+		<link rel="stylesheet" href="styles.css"></script>
+	</head>
+	<body>
+		<main>
+			<div class="newarticle">
+				<div class="editor">
+					<p>HOBBY TITLE (5-30 characters): <input type="text" class="newtitle"></p>
+					<p>HOBBY DESCRIPTION (40-70 characters): <input type="text" class="newdesc"></p>
+					<p>HOBBY TEXT (Remember to restate the title and use <a href="http://assemble.io/docs/Cheatsheet-Markdown.html">Markdown</a>. 200+ characters):</p>
+					<textarea class="newinfo" rows=20 cols=100></textarea>
+					<button class="newsubmit" onclick="submit()">SUBMIT</button>
+					<button onclick="$('.newarticle').style.display = 'none'" class="newclose">X</button>
+				</div>
+			</div>
+			<article>
+				# Hobbies for Humans
+				## A stupid website for hobbies because billy said so.
+				Hobbies for Humans is a crappy weekend thing I made because I was bored and now I have to live with my abysmal creation. Check the sidebar for 10 hobbies to do, or submit your own through the editor with Markdown. Markdown supports `code`, *italics*, __italics__,
+				# titles
+				and more. Created with Node.JS
+			</article>
+			<nav>
+				<div class="card">
+					<a class="cardcontent">
+						<h2 class="cardtitle">
+							Add a new hobby!
+						</h2>
+						<p class="carddesc">
+							Create a new hobby to add to the list
+						</p>
+						<button onclick="$('.newarticle').style.display = 'block'">CREATE</button>
+					</a>
+				</div>
+			</nav>
+		</main>
+		<script src="app.js"></script>
+	</body>
+</html>
