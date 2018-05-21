@@ -18,7 +18,7 @@ http.createServer((req, res) => {
 
 
 const exportJSON = () => {
-	let file  = fs.readFileSync('data.json')
+	let file  = fs.readFileSync('h4h-data.json')
 	let parse = JSON.parse(file)
 	let cut = '[' + JSON.stringify(parse[0]) + ',' + JSON.stringify(parse[1]) + ',' + JSON.stringify(parse[2]) + ',' + JSON.stringify(parse[3])
 	 				+ ',' + JSON.stringify(parse[4]) + ',' + JSON.stringify(parse[5]) + ',' + JSON.stringify(parse[6]) + ',' + JSON.stringify(parse[7])
@@ -33,5 +33,5 @@ const update = (pg) => {
 	code.unshift(JSON.parse(parsed))
 	code.pop()
 	console.log(code)
-	fs.writeFile("data.json", JSON.stringify( code), e=>console.log(e))
+	fs.writeFile("h4h-data.json", JSON.stringify( code), e=>console.log(e))
 }
