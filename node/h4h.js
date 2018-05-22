@@ -13,7 +13,7 @@ http.createServer((req, res) => {
 	if(req.url.includes('?io=home')) { res.write(exportJSON()); console.log('reading...') }
 	if(req.url.includes('?io=send')) { res.write("no data"); update(req.url) }
 	res.end()
-}).listen(747)
+}).listen(8080)
 
 
 
