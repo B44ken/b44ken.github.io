@@ -48,7 +48,7 @@ function submit() {
 			info: $('.newinfo').value,
 		}
 		packed = encodeURI(JSON.stringify(obj))
-		fetch('http://someonekill.me:747/?io=send&data=' + packed)
+		fetch('http://someonekill.me:8080/?io=send&data=' + packed)
 	}
 }
 
@@ -65,4 +65,4 @@ function init(cards) { // Because fetch is async we need a function to start it
 
 // Finally, make it all happen.
 
-fetch("http://someonekill.me:747/?io=home").then(r=>r.json()).then(e=>init(e))
+fetch("http://someonekill.me:8080/?io=home").then(r=>r.json()).then(e=>init(e))
