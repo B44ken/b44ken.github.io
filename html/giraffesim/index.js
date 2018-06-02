@@ -80,7 +80,7 @@ setInterval(()=> {
 
 let spiceMode = () => {
 	$('.giraffe *').src = 
-		"assets/unicorn.png"
+		"http://someonekill.me/giraffesim/assets/unicorn.png"
 	game.food = ['gummy']
 }
 console.log('spiceMode()')
