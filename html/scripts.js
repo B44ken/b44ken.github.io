@@ -75,6 +75,12 @@ const cardContent = [
 		link: "http://someonekill.me/paulsim",
 		img: "http://someonekill.me/paulsim/jakepaul.png"
 	},
+	{
+		title: "Giraffe Sim",
+		desc: "Somewhat complete. Become a giraffe and grow high.",
+		link: "http://someonekill.me/giraffesim",
+		img: "http://someonekill.me/giraffesim/assets/giraffe.png",
+	}.
 ];
 
 for (val in cardContent) {
