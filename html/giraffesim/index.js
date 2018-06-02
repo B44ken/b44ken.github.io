@@ -77,3 +77,10 @@ setInterval(()=> {
 		if(stat.food <= 0) stat.state = "not"
 	}
 }, 60)
+
+let spiceMode = () => {
+	$('.giraffe *').src = 
+		"assets/unicorn.png"
+	game.food = ['gummy']
+}
+console.log('spiceMode()')
