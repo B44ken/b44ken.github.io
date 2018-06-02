@@ -1,0 +1,56 @@
+body { width: 100vh; height: 100vh; margin: 0 }
+
+.sidebar {
+	position: absolute;
+	width: calc(100vw - 800px);
+	top: 0px;
+	right: 0px;
+}
+
+.game {
+	animation: bgscroll 30s infinite linear;
+	background-image: url("assets/background.png");
+	background-size: cover;
+	background-repeat: repeat;
+	background-position: 0 0;
+	position: relative;
+	height: 100vh;
+	width: 800px;
+}
+.food {
+	animation: fooddown 1.4s infinite linear;
+	display: block;
+	position: absolute;
+	width: 100px;
+}
+.giraffe {
+	left: 0px;
+	transition-duration: 120ms;
+	position: absolute;
+	bottom: 0px;
+	width: 100px;
+}
+
+button {
+	height: 50px;
+	width: 200px;
+	color: #fff;
+	background: #aaa;
+}
+
+p {
+	font-size: 20px;
+}
+
+.sidebar * {
+	text-align: center;
+}
+
+@keyframes fooddown {
+	0% {bottom: 100vw}
+	100% {bottom: 90px}
+}
+@keyframes bgscroll {
+	0% { background-position: 0 0 }
+	100% { background-position: 0 100vh; }
+}
