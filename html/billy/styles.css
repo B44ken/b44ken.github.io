@@ -1,5 +1,6 @@
 img {
 	border-radius: 15px;
+	border: 5px double #333;
 }
 .button {
 	font-family: Comic Sans MS;
@@ -29,36 +30,49 @@ img {
 	text-decoration: none;
 	display: inline-block;
 	font-size: 16px;
+	animation: 0.5s rumble infinite;
 }
 body {
 	text-align: center;
-	background-color: rgb(20, 25, 25);
+	background: linear-gradient(135deg, red,orange,yellow,green,blue,purple);
 }
 ::-webkit-scrollbar {
 	box-shadow: 2px 0px 25px 0px #eee;
 	width: 10px;
-	background: linear-gradient(to bottom, #f00, #fc0, #ff0, #0f0, #00f, #f0f);
+	background: rgb(20,25,25);
 }
 ::-webkit-scrollbar-thumb {
 	border-radius: 10px;
-	background-color: #fff;
+	background-color: rgba(255, 255, 255, 0.75);
+}
+::-webkit-scrollbar-thumb:hover {
+	background-color: rgba(255, 255, 255, 1);
 }
 .pinktext {
-	color: pink;
+	color: rgb(20,25,25);
 	font-family: Comic Sans MS;
 }
+#anchor {
+	background-color: rgba(200,200,200,0.6);
+}
 #dark {
+	right: 50.25vw;
 	background-color: #666;
 	color: #ddd;
 	border: none;
 	border-radius: 5px 0px 0px 5px;
 }
 #light {
+	left: 50.25vw;
+	background-color: #ddd;
+	color: #333;
 	border: none;
 	border-radius: 0px 5px 5px 0px;
 }
 #dark,
 #light {
+	position: absolute;
+	top: 1vh;
 	transition-duration: 0.4s;
 	padding: 7px;
 	margin: 3px;
@@ -68,17 +82,25 @@ body {
 	padding: 10px;
 	margin: 0px;
 }
-#light:focus, #dark:focus {
+#light:focus,
+#dark:focus {
 	border: 5px outset #aff;
 	outline: none;
 }
 a {
-	color: #faa;
+	color: #225;
 	text-decoration: line-through;
 }
 a:hover {
-	color: #afa;
+	color: #337;
+	text-decoration: none;
+	font-weight:bold;
 }
-a:active {
-	color: #aaf;
+@keyframes rumble {
+	25%{
+		transform: translateX(20px);
+	}
+	75%{
+		transform: translateX(-20px);
+	}
 }
