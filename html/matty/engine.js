@@ -61,6 +61,10 @@ const mattyEngine = {
 			}
 		}
 	},
+	clearQueue: () => {
+		mattyEngine.data.queue = []
+		mattyEngine.dialogAdvance()
+	},
 	queueEmpty: () => (mattyEngine.data.elements.dialog.style.display == 'none'),
 	recent: undefined,
 }
